@@ -148,7 +148,7 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     padding: 100px 100px 120px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 .banner-title {
     font-family: 'Nunito Sans', sans-serif;
@@ -192,10 +192,14 @@ header {
     border-radius: 5px;
     padding: 18px 25px;
     border: 1px solid #FBB731;
+    transition: 0.3s;
 }
 .banner-link:hover {
     background-color: transparent;
     color: #FBB731;
+}
+.menu {
+    padding-top: 20px;
 }
 .menu-header {
     display: flex;
@@ -287,6 +291,7 @@ header {
     justify-content: center;
     margin: 0 auto;
     gap: 9px;
+    transition: 0.3s;
 }
 .menu-grid-btn:hover {
     background-color: #F37335;
@@ -405,6 +410,29 @@ header {
     padding-left: 0;
     list-style-type: none;
 }
+.button-up {
+    background-color: #FBB731;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #1E2F40;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: 1s;
+}
+.button-up:hover {
+    background-color: #F37335;
+}
+.button-up.hidden {
+    opacity: 0;
+}
+.button-up.visible {
+    opacity: 1;
+}
 
 /* Style INDEX */
 
@@ -451,11 +479,21 @@ header {
     background-color: #FBB731;
     border-radius: 5px;
     text-decoration: none;
-    padding: 20px 46px;
+    padding: 18px 44px;
     display: inline-block;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
+    transition: 0.3s;
+    border: 1px solid #FBB731;
+}
+.content-link:hover {
+    background-color: transparent;
+    color: #FBB731;
+}
+.promo a:hover {
+    background-color: transparent;
+    color: #FBB731;
 }
 .visual {
     flex-grow: 1;
