@@ -15,6 +15,9 @@
     <header>
         <div class="container">
             <div class="header" id="headerTop">
+                <div class="header-burger">
+                    <button class="burger" onclick="openModal()"></button>
+                </div>
                 <div class="header-item">
                     <a href="index.html" class="header-logo"></a>
                     <nav>
@@ -43,7 +46,7 @@
                 <li><a href="#menuBurger">Меню</a></li>
             </ul>
             <h1 class="title">Наше Меню</h1>
-            <p class="description">Выбирай из предложенного ассортимента и мы доставим блюдо в течении часа</p>
+            <p class="description">Выбирай из предложенного ассортимента и&nbsp;мы&nbsp;доставим блюдо в течении часа</p>
         </div>
     </div>
     <main>
@@ -55,7 +58,7 @@
                         -30%
                     </h2>
                     <p class="banner-text">
-                        Только при покупке 3-х и более позиций, мы дарим скидку. Акции не суммируются.
+                        Только при покупке 3-х&nbsp;и&nbsp;более&nbsp;позиций, мы&nbsp;дарим скидку. Акции не суммируются.
                     </p>
                     <a href="#menuBurger" class="banner-link">купить сейчас</a>
                 </div>
@@ -143,7 +146,7 @@
                 </div>
             </div>
         </section>
-        <section class="products">
+        <section class="menu menu-over">
             <div class="container">
                 <div class="menu-header">
                     <h2 class="menu-title">
@@ -202,6 +205,14 @@
                         <li><a href="#">Методы оплаты</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
+                    <ul class="footer-list footer-list-tel">
+                        <li>
+                            <a href="tel:+79007871313">+ 7 900 787 13-13</a>
+                        </li>
+                        <li>
+                            <a href="tel:+79007001414">+ 7 900 700 14-14</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="footer-item">
                     <h2>основная информация</h2>
@@ -231,6 +242,15 @@
         </div>
     </footer>
     <a href="#headerTop" class="button-up hidden" id="btnUp">наверх</a>
+    <div class="modal" id="modal">
+        <ul class="header-nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#" class="active">Меню</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <button class="burger-close" onclick="closeModal()"></button>
+    </div>
     <script>
         // Smooth Scroll
 
@@ -273,7 +293,15 @@
                 document.getElementById('btnUp').className = 'button-up hidden';
             }
         }
+        // Menu
 
+        function openModal() {
+                document.getElementById("modal").style.top = "0px";
+            }
+
+        function closeModal() {
+            document.getElementById("modal").style.top = "-400px";
+        }
     </script>
 </body>
 </html>
